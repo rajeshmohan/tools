@@ -1201,7 +1201,7 @@ getposting(void)
 static void
 putpostingref(POSTING *p, char *pat)
 {
-	static char	function[PATLEN + 1];	/* function name */
+	static char	function[PATLEN + 1] = "unknown";	/* function name */
 
 	if (p->fcnoffset == 0) {
 		if (p->type == FCNDEF) { /* need to find the function name */
